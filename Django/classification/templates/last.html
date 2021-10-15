@@ -1,0 +1,94 @@
+<body>
+{%load static%} 
+<div style="border: 1px black; float: left; width: 10%; height: 100%">
+</div>
+    <div style="border: 5px  black; float: left; width: 80%; height: 10%">
+    
+        <h1>
+        <a href="{% url 'home' %}"><img src="{%static 'classification/img/logo.GIF'%}" alt="s'car 로고" height="60"></a>
+        <a href="{% url 'last' %}"><img src="{%static 'classification/img/banner2_ver02.gif'%}" alt="차량파손인식이미지배너" height="70">
+        <a></a>
+        </h1>
+    </div>
+
+
+
+    <!-- <div> -->
+    <div style="border: 1px black; float: left; width: 35%; height: 43%">
+    <h2><img src="{%static 'classification/img/front1.gif'%}"  width="350"></h2>
+    <form action="{% url "front" %}" method="post", enctype="multipart/form-data">
+        
+        <div><img src="{%static 'guide/car_front.jpg'%}"  width="300"></div>
+        {% csrf_token %}
+        {{ form1 }} 
+        <button 
+        type="submit" 
+        style="color:black; backgrount:blue; font-size:1em; border-radius:0.5em; padding:5px 20px"
+        onClick="location.href='last.html'">Upload</button></a>
+        <form method="get">
+    </form>
+    </div>
+    
+    <!-- <div> -->
+    <div style="border: 1px black; float: right; width: 50%; height: 43%">
+    <h2><img src="{%static 'classification/img/back1.gif'%}"  width="350"></h2>
+    <form action="{% url "back" %}" method="post", enctype="multipart/form-data">
+        {%load static%}
+        <div><img src="{%static 'guide/car_back.jpg'%}"  width="300"></div>
+        {% csrf_token %}
+        {{ form2 }}
+        <button 
+        type="submit" 
+        style="color:black; backgrount:blue; font-size:1em; border-radius:0.5em; padding:5px 20px"
+        onClick="location.href='last.html'">Upload</button></a>
+        <form method="get">
+        </form>
+    </form>
+    </div>
+
+    <!-- <div> -->
+    <div style="border: 1px black; float: left; width: 35%; height: 43%">
+    <h2><img src="{%static 'classification/img/left1.gif'%}"  width="350"></h2>
+    <form action="{% url "left" %}" method="post", enctype="multipart/form-data">
+        
+        {%load static%}
+        <div><img src="{%static 'guide/car_left.jpg'%}"  width="300"></div>
+        {% csrf_token %}
+        {{ form3 }}
+        <button 
+        type="submit" 
+        style="color:black; backgrount:blue; font-size:1em; border-radius:0.5em; padding:5px 20px"
+        onClick="location.href='last.html'">Upload</button></a>
+        </form>
+    </form>
+    </div>
+
+    <!-- <div> -->
+    <div style="border: 1px black; float: right; width: 50%; height: 43%">
+    <h2><img src="{%static 'classification/img/right1.gif'%}"  width="350"></h2>
+    <form action="{% url "right" %}" method="post", enctype="multipart/form-data">
+        
+        {%load static%}
+        <div><img src="{%static 'guide/car_right.jpg'%}"  width="300"></div>
+        {% csrf_token %}
+        {{ form4 }}
+        <button 
+        type="submit" 
+        style="color:black; backgrount:blue; font-size:1em; border-radius:0.5em; padding:5px 20px"
+        onClick="location.href='last.html'">Upload</button></a>
+        </form>
+    </form>
+    </div>
+    
+    <!-- <div> -->
+    <div style="border: 1px black; float: left; width: 40%; height: 10%">
+    <form action="{% url "predict" %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <button 
+        type="submit" 
+        style="color:black; backgrount:blue; font-size:1em; border-radius:0.5em; padding:5px 20px"
+        onClick="location.href='last.html'">예측</button></a>
+    </form>
+    </div>
+
+</body>

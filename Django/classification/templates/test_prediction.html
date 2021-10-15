@@ -1,0 +1,46 @@
+
+<body>
+<h1>Car Damage Prediction</h1>
+<a href="{% url 'home' %}">home</a>
+
+
+<form1 method="post", enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form1 }}
+    <button type="submit">Upload</button>
+    {%load static%}
+    <h2>Prediction: {{ result1 }}</h2>
+    <img src="{%static 'damage/car.jpg'%}"  height="400">
+</form1>
+
+
+<form2 method="post", enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form2 }}
+    <button type="submit">Upload</button>
+    {%load static%}
+    <h2>Prediction: {{ result2 }}</h2>
+    <img src="{%static 'damage/car.jpg'%}"  height="400">
+</form2>
+
+
+<form3 method="post", enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form3 }}
+    <button type="submit">Upload</button>
+    {%load static%}
+    <h2>Prediction: {{ result3 }}</h2>
+    <img src="{%static 'damage/car.jpg'%}"  height="400">
+</form3>
+
+
+<form4 method="post", enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form4 }}
+    <button type="submit">Upload</button>
+    {%load static%}
+    <h2>Prediction: {{ result4 }}</h2>
+    <img src="{%static 'damage/car.jpg'%}"  height="400">
+</form4>
+
+</body>

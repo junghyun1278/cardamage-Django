@@ -1,0 +1,47 @@
+<body>
+{%load static%} 
+
+<div style="border: 1px black; float: left; width: 10%; height: 500%">
+</div>
+<div style="border: 5px  black; float: left; width: 80%; height: 10%">
+        <h1>
+        <a href="{% url 'home' %}"><img src="{%static 'classification/img/logo.GIF'%}" alt="s'car 로고" height="60"></a>
+        <a href="{% url 'last' %}"><img src="{%static 'classification/img/banner2_ver02.gif'%}" alt="차량파손인식이미지배너" height="60">
+        <a ></a>
+        </h1>
+    </div>
+    <!--
+    <a href="{% url 'last' %}">이전 페이지</a></h3></div>
+    -->
+
+    
+
+
+    <div style="border: 1px black; float: left; width: 80%; height: 8%">
+    <h2>차량 모델 : {{car_model}}</h2>
+    </div>
+
+    <div style="border: 1px black; float: left; width: 80%; height: 90%">
+    <!-- <div style="border: 1px black; float: left; width: 45%; height: 45%"> -->
+    <h2><img src="{%static 'classification/img/f_ront.gif'%}"  width="900"></h2>
+    <img src="{%static 'damage/front.jpg'%}"  width="900">
+    </div>
+    
+    <div style="border: 1px black; float: left; width: 80%; height: 90%">
+    <!-- <div style="border: 1px black; float: left; width: 45%; height: 45%"> -->
+    <h2><img src="{%static 'classification/img/b_ack.gif'%}"  width="900"></h2>
+    <img src="{%static 'damage/back.jpg'%}"  width="900">
+    </div>
+
+    <div style="border: 1px black; float: left; width: 80%; height: 90%">
+    <!-- <div style="border: 1px black; float: left; width: 45%; height: 45%"> -->
+    <h2><img src="{%static 'classification/img/l_eft.gif'%}"  width="900"></h2>
+    <img src="{%static 'damage/left.jpg'%}"  width="900">
+    </div>
+
+    <div style="border: 1px black; float: left; width: 80%; height: 90%">
+    <!-- <div style="border: 1px black; float: left; width: 45%; height: 45%"> -->
+    <h2><img src="{%static 'classification/img/r_ight.gif'%}"  width="900"></h2>
+    <img src="{%static 'damage/right.jpg'%}"  width="900">
+    </div>
+</body>

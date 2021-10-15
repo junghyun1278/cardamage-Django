@@ -1,0 +1,79 @@
+<body>
+
+    <h1>Car segmentation</h1>
+    <div><a href="{% url 'home' %}">home</a></div>
+
+    <div style="border: 1px black; float: left; width: 45%; height: 45%">
+    <h2>Front</h2>
+    <form action="{% url "front" %}" method="post", enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }} 
+        <button 
+        type="submit" 
+        style="color:black; backgrount:blue; font-size:1em; border-radius:0.5em; padding:5px 20px"
+        onClick="location.href='fornt.html'">Upload</button></a>
+        <form method="get">
+        {%load static%}
+        
+        <img src="{%static 'damage/front.jpg'%}"  height="200">
+        <h3>Prediction: {{ result }}</h3>
+        <h3>car_class: {{ car_class }}</h3> 
+    </form>
+    </div>
+    
+    <div style="border: 1px black; float: left; width: 45%; height: 45%">
+    <h2>Back</h2>
+    <form action="{% url "back" %}" method="post", enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form2 }}
+        <button 
+        type="submit" 
+        style="color:black; backgrount:blue; font-size:1em; border-radius:0.5em; padding:5px 20px"
+        onClick="location.href='back.html'">Upload</button></a>
+        <form method="get">
+        {%load static%}
+        
+        <img src="{%static 'damage/back.jpg'%}"  height="200">
+        <h3>Prediction: {{ result2 }}</h3>
+        </form>
+    </form>
+    </div>
+
+    <div style="border: 1px black; float: left; width: 45%; height: 45%">
+    <h2>Left</h2>
+    <form action="{% url "left" %}" method="post", enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form3 }}
+        <button 
+        type="submit" 
+        style="color:black; backgrount:blue; font-size:1em; border-radius:0.5em; padding:5px 20px"
+        onClick="location.href='left.html'">Upload</button></a>
+
+        <form method="get">
+        {%load static%}
+        
+        <img src="{%static 'damage/left.jpg'%}"  height="200">
+        <h3>Prediction: {{ result2 }}</h3>
+        </form>
+    </form>
+    </div>
+
+    <div style="border: 1px black; float: left; width: 45%; height: 45%">
+    <h2>Right</h2>
+    <form action="{% url "right" %}" method="post", enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form4 }}
+        <button 
+        type="submit" 
+        style="color:black; backgrount:blue; font-size:1em; border-radius:0.5em; padding:5px 20px"
+        onClick="location.href='right.html'">Upload</button></a>
+
+        <form method="get">
+        {%load static%}
+        
+        <img src="{%static 'damage/right.jpg'%}"  height="200">
+        <h3>Prediction: {{ result2 }}</h3>
+        </form>
+    </form>
+    </div>
+</body>

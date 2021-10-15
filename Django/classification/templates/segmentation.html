@@ -1,0 +1,29 @@
+<body>
+{%load static%} 
+<div style="border: 1px black; float: left; width: 3%; height: 100%">
+</div>
+<div style="border: 5px  black; float: left; width: 97%; height: 15%">
+    <h1>
+    <a href="{% url 'home' %}"><img src="{%static 'classification/img/logo.GIF'%}" alt="s'car 로고" height="60"></a>
+    <a href="{% url 'last' %}"><img src="{%static 'classification/img/banner2_ver02.gif'%}" alt="차량파손인식이미지배너" height="70">
+    <a></a>
+    </h1>
+{% comment %} </div>
+
+
+<div> {% endcomment %}
+<form method="post", enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <button 
+        type="submit" 
+        style="color:black; backgrount:blue; font-size:1em; border-radius:0.5em; padding:5px 20px">Upload</button></a>
+</form>
+
+{%load static%}
+<!--
+    <h2>Prediction: {{ result }}</h2>
+    -->
+<img src="{%static 'detect/detect.jpg'%}"  width="800">
+</div>
+</body>

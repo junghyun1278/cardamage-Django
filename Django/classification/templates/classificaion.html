@@ -1,0 +1,36 @@
+{%load static%} 
+<div style="border: 5px  black; float: left; width: 80%; height: 10%">
+    <h1>
+    <a href="{% url 'home' %}"><img src="{%static 'classification/img/logo.GIF'%}" alt="s'car 로고" height="60"></a>
+    <a href="{% url 'classification' %}"><img src="{%static 'classification/img/banner1_ver02.gif'%}" alt="차량파손인식이미지배너" height="60">
+    <a href="{% url 'last' %}"><img src="{%static 'classification/img/nav2.GIF'%}" alt="s'car 로고" height="60"></a>
+    </h1>
+</div>
+
+<!-- 공백 넣기-->
+<div style="border: 5px black; float: left; width: 20%; height: 10%">
+</div>
+<div style="border: 1px  lack; float: left; width: 100%; height: 10%">
+</div>
+<div style="border: 1px black; float: left; width: 5%; height: 10%">
+</div>
+
+<div style="border: 5px black; float: left; width: 20%; height: 10%">
+</div>
+<div><img src="{%static 'guide/car_front.jpg'%}"  width="550"></div>
+<div style="border: 5px black; float: left; width: 20%; height: 10%">
+</div>
+<!-- 이미지 업로드 -->
+<div style="border: 5px black; float: left; width: 10%; height: 10%">
+</div>
+<div style="border: 1px black; float: left; width: 60%; height: 50%">
+<form method="post", enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <button 
+        type="submit" 
+        style="color:black; backgrount:blue; font-size:1em; border-radius:0.5em; padding:5px 20px"
+        onClick="location.href='front.html'">Upload</button>
+</form>
+<h2>차 기종 : {{result}}</h2>
+</div>

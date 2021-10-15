@@ -1,0 +1,16 @@
+<body>
+
+<h1>Car segmentation</h1>
+<a href="{% url 'home' %}">home</a>
+
+<form method="post", enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Upload</button>
+</form>
+
+{%load static%}
+<h2>Prediction: {{ result }}</h2>
+<img src="{%static 'damage/car.jpg'%}"  height="500">
+
+</body>
